@@ -32,10 +32,11 @@ def lets_break(n: int) -> int:
     counter = 0
     # wcounter = 0
     while True:
-        counter += 1
-        n = n + 1
         if n == 10:
             break
+        else:
+            counter += 1
+            n = n + 1
     return counter
 
 

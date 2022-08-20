@@ -23,7 +23,7 @@ from typing import Union
 
 def calculator(num1: int, num2: int, operation: str) -> Union[int, float, str]:
     while True:
-        if operation_val in ('+', '-', '*', '/'):
+        if operation in ('+', '-', '*', '/'):
             if operation == '+':
                 result = num1 + num2
             elif operation == '*':

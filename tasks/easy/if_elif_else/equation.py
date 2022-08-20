@@ -52,13 +52,16 @@ def resolve_equation(a: float, b: float, c: float) -> tuple:
     :rtype: tuple
     """
     d = b ** 2 - 4 * a * c
+    n_var = 0
+    var1 = 0
+    var2 = 0
     if d > 0:
         n_var = 2
-        var1 = (-b + d ** 2) / 2 * a
-        var2 = (-b - d ** 2) / 2 * a
+        var1 = (- b + d ** (1 / 2)) / 2 * a
+        var2 = (- b - d ** (1 / 2)) / 2 * a
     elif d == 0:
         n_var = 1
-        var1 = (-b + d ** 2) / 2 * a
+        var1 = (- b + d ** (1 / 2)) / 2 * a
         var2 = None
     elif d < 0:
         n_var = 0

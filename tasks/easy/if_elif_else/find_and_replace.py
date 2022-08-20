@@ -22,11 +22,9 @@ def find_and_replace(check_str: str, search_str: str) -> tuple:
     :return: обработанные строки
     :rtype: tuple
     """
-    search_str = {search_str}
-    check_str = {check_str}
-    if check_str.issuperset(check_str) is True:
-        check_str = " ".join(check_str).swapcase()
-        search_str = " ".join(search_str).title()
+    if search_str in check_str:
+        check_str = check_str.swapcase()
+        search_str = (search_str).title()
     return check_str, search_str
 
 

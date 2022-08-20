@@ -22,8 +22,8 @@ def hide_card_numbers(card_number: str) -> str:
     :return: строка с номером карты со звездочками или строка "Ошибка"
     :rtype: str
     """
-    if card_number.isdigit() and len(card_number) == 16:
-        result = " ".join(list(card_number)[0:4] + ["*", "*", "*", "*"] + list(card_number)[12:16])
+    if card_number.isdigit() and int(card_number) > 0 and len(card_number) == 16:
+        result = str("".join(list(card_number)[0:4] + ["*", "*", "*", "*", "*", "*", "*", "*"] + list(card_number)[12:16]))
     else:
         raise TypeError("Ошибка")
     return result
