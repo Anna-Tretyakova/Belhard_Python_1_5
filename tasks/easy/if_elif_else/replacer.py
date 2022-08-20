@@ -36,7 +36,7 @@ def replacer(check_str: str, search_str: str, replace_str: str) -> str:
         check_str = check_str.replace(search_str, replace_str)
         result = check_str
     else:
-        raise Exception(f"Ошибка")
+        raise Exception("Ошибка")
     return result
 
 

@@ -24,19 +24,19 @@ from typing import Union
 def calculator(num1: int, num2: int, operation: str) -> Union[int, float, str]:
     while True:
         if operation_val in ('+', '-', '*', '/'):
-            if operation_val == '+':
+            if operation == '+':
                 result = num1 + num2
-            elif operation_val == '*':
+            elif operation == '*':
                 result = num1 * num2
-            elif operation_val == '-':
+            elif operation == '-':
                 result = num1 - num2
-            elif operation_val == '/':
+            elif operation == '/':
                 if num2 != 0:
                     result = num1 / num2
                 else:
                     raise ValueError
         else:
-            raise TypeError(f'Неизвестная операция')
+            raise TypeError('Неизвестная операция')
         return result
 
 

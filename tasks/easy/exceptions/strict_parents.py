@@ -61,7 +61,7 @@ if __name__ == '__main__':
         if get_score() < 7:
             raise ValueError(f"{get_score()}")
         else:
-            print(f"Ребенок получил хорошую оценку")
+            print("Ребенок получил хорошую оценку")
             gift = random_gift()
     except RuntimeError as exc:
         print(f"Возникла ошибка: {exc}")

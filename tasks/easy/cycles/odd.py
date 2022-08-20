@@ -19,9 +19,9 @@ def odd_in_list(some_list: list) -> list:
     odd_list = []
     for i in some_list:
         if type(i) == int and i % 2 == 0:
-            odd_list += str(i)
-        for i in odd_list:
-            i = int(i)
+            odd_list.append(i)
+        else:
+            continue
     return odd_list
 
 

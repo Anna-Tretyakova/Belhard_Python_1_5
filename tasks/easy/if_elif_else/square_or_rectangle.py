@@ -16,7 +16,7 @@ def square_or_rectangle(side1: int, side2: int) -> int:
     if side1 == side2:
         result = side1 ** 2
     elif side1 != side2:
-        result = side1 + side2
+        result = (side1 + side2) * 2
     return result
 
 

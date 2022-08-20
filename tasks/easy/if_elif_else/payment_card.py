@@ -25,7 +25,7 @@ def hide_card_numbers(card_number: str) -> str:
     if card_number.isdigit() and len(card_number) == 16:
         result = " ".join(list(card_number)[0:4] + ["*", "*", "*", "*"] + list(card_number)[12:16])
     else:
-        raise TypeError(f"Ошибка")
+        raise TypeError("Ошибка")
     return result
 
 

@@ -46,15 +46,15 @@ def get_seconds(h: int, m: int, s: int) -> Union[int, str]:
     """
     result = 0
     if h > 23 or h < 0:
-        raise ValueError(f"Ошибка. Допустимое значение для часов 0..23")
+        raise ValueError("Ошибка. Допустимое значение для часов 0..23")
     else:
         result += h * 3600
     if m > 59 or h < 0:
-        raise ValueError(f"Ошибка. Допустимое значение для минут 0..59")
+        raise ValueError("Ошибка. Допустимое значение для минут 0..59")
     else:
         result += m * 60
     if s > 59 or h < 0:
-        raise ValueError(f"Ошибка. Допустимое значение для секунд 0..59")
+        raise ValueError("Ошибка. Допустимое значение для секунд 0..59")
     else:
         result += s
     return result
